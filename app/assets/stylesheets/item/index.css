@@ -1,0 +1,51 @@
+.main {
+  background: #f0f8ff;
+  width: 100vw;
+}
+
+.first-view {
+  position: relative;
+}
+
+.top-image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.title-contents {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%,-50%);
+  color: black;
+}
+
+.service-title {
+  font-weight: bold;
+  font-size: 23px;
+  border-bottom: 2px solid;
+  margin: 10px 0;
+}
+
+.service-subtitle {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.select-contents {
+  background-color: #000080;
+  margin: 100px 200px;
+  padding: 50px;
+  color: #e6e6fa;
+  border-radius: 15px;
+}
+
+.select-title {
+  font-size: 25px;
+  margin: 10px 10px;
+}
+
+.select-text {
+  font-size: 18px;
+}

@@ -1,0 +1,59 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <div class='first-view'>
+    <!--「トップ画像」を表示する-->
+    <%= image_tag "toptitle.png", class:"top-image" %>
+    <!--画像内に見出しの表示-->
+    <div class='title-contents'>
+      <h2 class='service-title'>
+        キャッチコピーやタイトルを入力
+      </h2>
+      <p class='service-subtitle'>
+        安心した毎日の暮らしへ
+      </p>
+      <p class='service-subtitle'>
+        保険を知る第一歩。
+      </p>
+    </div>
+  </div>
+
+  <%# サイト概要の説明 %>
+  <div class='select-main'>
+    <div class='select-contents'>
+      <h3 class='select-title'>
+        Message
+      </h3>
+      <p class='select-text'>
+        どのような保険があるのかわからない、他の人はどこの保険に加入しているのだろう？
+        といった保険の悩みを解決します。<br>
+        一般的な保険の種類や内容の解説を記載しております。また各保険分野において様々な人とコメントにて相談をすることができ,
+        安心した人生設計へのお手伝いをいたします。
+      </p>
+    </div>
+    <%# %保険とは解説 %>
+    <div class='select-contents'>
+      <h3 class='select-title'>
+        保険とは
+      </h3>
+      <p class='select-text'>
+        保険についての内容を入力
+      </p>
+    </div>
+  </div>
+
+  <%# 保険一覧 %>
+  <div class='item-contents'>
+    <h3 class='select-title'>
+      保険一覧
+    </h3>
+    <ul class='item-lists'>
+      <%# @items.each do |item| %>
+        <li class='list'>
+          
+        </li>
+      <%# end %>
+    </ul>
+  </div>
+</div>
+<%= render "shared/footer" %>
