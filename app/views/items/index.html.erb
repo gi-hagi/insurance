@@ -48,13 +48,22 @@
       保険一覧
     </h3>
     <ul class='item-lists'>
-      <%# @items.each do |item| %>
-        <li class='list'>
-          
+      <% @items.each do |item| %>
+        <li class='item-list'>
+          <%# link_to item_path(item.id) do %>
+            <div class='item-info'>
+              <%= item.title %>
+            </div>
+            <div class='item-feature'>
+              <%= item.feature %>
+            </div>
+          <%# end %>
         </li>
-      <%# end %>
+      <% end %>
     </ul>
   </div>
 </div>
-<%= link_to "新規投稿", new_item_path, class: "purchase-btn" %>
+<% if user_signed_in? %>
+  <%= link_to "新規投稿", new_item_path, class: "purchase-btn" %>
+<% end %>
 <%= render "shared/footer" %>

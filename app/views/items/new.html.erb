@@ -1,3 +1,40 @@
-<%= render "shared/header" %>
+<%= render "shared/second-header" %>
+
+<div class="main">
+  <div class="items-main">
+    <h2 class="items-title">保険の内容を入力</h2>
+    <%= form_with model: @item, local: true do |f| %>
+
+      <div class="field">
+        <%= f.label :title, "保険名" %><br />
+        <%= f.text_field :title, id:"insurance_title" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :concept, "解説" %><br />
+        <%= f.text_area :concept, class: :form__text, id:"concept" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :feature, "特徴" %><br />
+        <%= f.text_area :feature, class: :form__text, id:"feature" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :merit, "メリット" %><br />
+        <%= f.text_area :merit, class: :form__text, id:"merit" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :demerit, "デメリット" %><br />
+        <%= f.text_area :demerit, class: :form__text, id:"demerit" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "投稿する", class: :form__btn  %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <%= render "shared/footer" %>
