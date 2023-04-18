@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :item_action, except: [:index, :new, :create]
+
   def index
     @items = Item.all
   end
@@ -17,7 +19,14 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+  end
+  
   private
+
+  def item_action
+    @item = Item.find(params[:id])
+  end
 
   def item_params
     params.require(:item).permit(:title, :concept, :feature, :merit, :demerit).merge(user_id: current_user.id)

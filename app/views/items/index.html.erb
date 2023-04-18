@@ -50,16 +50,14 @@
     <ul class='item-lists'>
       <% @items.each do |item| %>
         <li class='item-list'>
-          <%# link_to item_path(item.id) do %>
-            <div class='item-info'>
-              <div class='item-sub'>
-                <%= item.title %>
-              </div>
+          <div class='item-info'>
+            <div class='item-sub'>
+              <%= link_to item.title, item_path(item.id), class: :item_none %>
             </div>
-            <div class='item-feature'>
-              <%= item.feature %>
-            </div>
-          <%# end %>
+          </div>
+          <div class='item-feature'>
+            <%= link_to item.feature, item_path(item.id), class: :item_none %>
+          </div>
         </li>
       <% end %>
     </ul>
