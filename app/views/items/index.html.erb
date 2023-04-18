@@ -44,7 +44,7 @@
 
   <%# 保険一覧 %>
   <div class='item-contents'>
-    <h3 class='select-title'>
+    <h3 class='select-insurance'>
       保険一覧
     </h3>
     <ul class='item-lists'>
@@ -52,7 +52,9 @@
         <li class='item-list'>
           <%# link_to item_path(item.id) do %>
             <div class='item-info'>
-              <%= item.title %>
+              <div class='item-sub'>
+                <%= item.title %>
+              </div>
             </div>
             <div class='item-feature'>
               <%= item.feature %>
