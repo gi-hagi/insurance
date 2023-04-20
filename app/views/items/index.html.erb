@@ -44,16 +44,26 @@
 
   <%# 保険一覧 %>
   <div class='item-contents'>
-    <h3 class='select-title'>
+    <h3 class='select-insurance'>
       保険一覧
     </h3>
     <ul class='item-lists'>
-      <%# @items.each do |item| %>
-        <li class='list'>
-          
+      <% @items.each do |item| %>
+        <li class='item-list'>
+          <div class='item-info'>
+            <div class='item-sub'>
+              <%= link_to item.title, item_path(item.id), class: :item_none %>
+            </div>
+          </div>
+          <div class='item-feature'>
+            <%= link_to item.feature, item_path(item.id), class: :item_none %>
+          </div>
         </li>
-      <%# end %>
+      <% end %>
     </ul>
   </div>
 </div>
+<% if user_signed_in? %>
+  <%= link_to "新規投稿", new_item_path, class: "purchase-btn" %>
+<% end %>
 <%= render "shared/footer" %>

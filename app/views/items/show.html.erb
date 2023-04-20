@@ -1,0 +1,49 @@
+<%= render "shared/header" %>
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @item.title %>
+    </h2>
+  </div>
+  <div class="item-page">
+    <div class="item-show">
+      <p class="content-list">特徴</p>
+      <p class="feature-item">
+      <%= @item.feature %>
+      </p>
+    </div>
+    <div class="item-show">
+      <p class="content-list">説明</p>
+      <p class="concept-item">
+      <%= @item.concept %>
+      </p>
+    </div>
+    <div class="item-show">
+      <p class="content-list">説明</p>
+      <p class="concept-item">
+      <%= @item.concept %>
+      </p>
+    </div>
+    <div class="item-show">
+      <p class="content-list">メリット</p>
+      <p class="merit-item">
+      <%= @item.merit %>
+      </p>
+    </div>
+    <div class="item-show">
+      <p class="content-list">デメリット</p>
+      <p class="demerit-item">
+      <%= @item.demerit %>
+      </p>
+    </div>
+  </div>
+</div>
+<% if user_signed_in? %>
+  <% if current_user.id == @item.user_id %>
+    <div class="item-edit">
+      <%= link_to "編集", edit_item_path, method: :get, class:"purchase-btn-red" %>
+      <%= link_to "削除", item_path, method: :delete, class:"purchase-btn-des" %>
+    </div>
+  <% end %>
+<% end %>
+<%= render "shared/footer" %>

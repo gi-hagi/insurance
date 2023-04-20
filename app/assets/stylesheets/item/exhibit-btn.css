@@ -1,0 +1,12 @@
+.purchase-btn {
+  background-color: #696969;
+  color: #ffffff;
+  width: 120px;
+  border-radius: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 35px;
+  right: 40px;
+  padding: 20px;
+  text-decoration: none;
+}
