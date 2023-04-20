@@ -8,7 +8,7 @@
     <% if current_user.id == @item.user_id %>
       <div class="item-edit">
         <%= link_to "編集", edit_item_path, method: :get, class:"purchase-btn-red" %>
-        <%= link_to "削除", item_path, method: :delete, class:"purchase-btn-des" %>
+        <%= link_to "削除", item_path, method: :delete, class:"purchase-btn-red" %>
       </div>
     <% end %>
   <% end %>

@@ -1,0 +1,13 @@
+.item-edit {
+  display: flex;
+  justify-content: center;
+}
+
+.purchase-btn-red {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #203744;
+  margin: 15px 30px;
+  padding: 10px 25px;
+  border-radius: 30px;
+}

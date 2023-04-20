@@ -32,11 +32,17 @@
   width: 50%;
 }
 
-.actions-edit {
-  align-items: center;
+.form_btn {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin: 20px;
+  padding: 30px;
+  background: #a7a7a7;
+  border: 1px solid #1f1f1f;
+  border-radius: 10px;
 }
 
-.form_btn {
-  margin: 15px;
-  padding: 10px 20px;
+.back-btn {
+  margin: 20px;
 }
