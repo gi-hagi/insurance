@@ -1,0 +1,43 @@
+.items-main {
+  text-align: center;
+}
+
+.items-title {
+  margin: 30px;
+  font-size: 30px;
+}
+
+.field {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.form_title {
+  margin: 10px;
+  padding:10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  width: 50%;
+  resize: none;
+}
+
+.form_text {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  resize: none;
+  height: 9em;
+  width: 50%;
+}
+
+.actions-edit {
+  align-items: center;
+}
+
+.form_btn {
+  margin: 15px;
+  padding: 10px 20px;
+}

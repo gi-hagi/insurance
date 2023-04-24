@@ -21,17 +21,20 @@
       </div>
 
       <div class="field">
-        <%= f.label :merit, "メリット (任意)" %><br />
+        <%= f.label :merit, "メリット" %><br />
         <%= f.text_area :merit, class: :form_text, id:"merit" %>
       </div>
 
       <div class="field">
-        <%= f.label :demerit, "デメリット (任意)" %><br />
+        <%= f.label :demerit, "デメリット" %><br />
         <%= f.text_area :demerit, class: :form_text, id:"demerit" %>
       </div>
 
-      <div class="actions">
-        <%= f.submit "投稿する", class: :form_btn  %>
+      <div class="actions-edit">
+        <%= f.submit "編集する", class: :form_btn  %>
+      </div>
+      <div class="back-btn">
+        <%=link_to 'もどる', item_path, class:"form_btn" %>
       </div>
     <% end %>
   </div>
