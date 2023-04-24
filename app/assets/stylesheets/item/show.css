@@ -1,6 +1,14 @@
+.item-box {
+  text-align: center;
+}
+
+.name {
+  font-size: 35px;
+  margin: 35px;
+}
+
 .item-edit {
-  display: flex;
-  justify-content: center;
+  margin: 30px;
 }
 
 .purchase-btn-red {
@@ -10,4 +18,8 @@
   margin: 15px 30px;
   padding: 10px 25px;
   border-radius: 30px;
+}
+
+.item-show {
+  display: flex;
 }
