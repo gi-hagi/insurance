@@ -1,52 +1,44 @@
-# README
+# アプリケーション名
+Life Planner
 
-#　usersテーブル
+# アプリケーション概要
+保険についての説明をトップページにて行い、保険の種類や特徴についてわかるようにする。
 
-| Column             | Type   | Options                   |
-| ------------------ | -------| ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
-| birthday           | date   | null: false               |
+また詳細ページにてコメント機能があり、ユーザー同士でコメントを使い、相談をすることができる。
 
-### Association
-* has_many :items
-* has_many :comments
+# URL
 
-#　items テーブル
+# テスト用アカウント
+・Basicパスワード :2222
+・Basic認証ID :admin
+・メールアドレス :test@test
+・パスワード :test1234
+# 利用方法
+# 投稿機能
+1.トップページのヘッダーよりユーザー新規登録を行う
 
-| Column            | Type       | Options                        |
-| ----------------- | -----------| ------------------------------ |
-| title             | string     | null: false                    |
-| concept           | text       | null: false                    |
-| feature           | text       | null: false                    |
-| merit             | text       |                                |
-| demerit           | text       |                                |
-| user              | references | null: false, foreign_key: true |
+2.トップページの新規投稿ボタンより投稿内容の(保険名・解説・特徴・メリット・デメリット)を入力し投稿ボタンを押す
 
-### Association
-- belongs_to :user
-* has_many :like
-* has_many :comment
+# コメント機能
+1.トップページの投稿一覧から投稿内容をクリックし、投稿内容の詳細を開く
 
-# likes テーブル
+　2.ユーザー同士で投稿内容についてコメントをしたり、相談を行うことができる
+# アプリケーションを作成した背景
+保険について必要と思っているけど難しくてわからず、手を出しにくいという声を現職での仕事中によく聞いていた。保険は多くの人から同様の問題を抱えられていると経験から痛感し保険の解説や、ユーザー同士で質問をすることができるサイトを開発することにした。
+# 洗い出した要件
+https://docs.google.com/spreadsheets/d/1YXLVGVSZ6fGSKc8jpyxCVdbo3YKS-ACGshxqgezp4DI/edit?usp=sharing
 
-| Column         | Type       | Options                        |
-| -------------- | -----------| ------------------------------ |
-| user           | references | null: false, foreign_key: true |
-| item           | references | null: false, foreign_key: true |
+# 実装した機能についての画像
 
-### Association
-- belongs_to :user
-- belongs_to :item
+# 実装予定の機能
+1.コメント機能の実装
 
-# comments テーブル
-| Column            | Type       | Options                        |
-| ----------------- | -----------| ------------------------------ |
-| text              | text       | null: false                    |
-| user              | references | null: false, foreign_key: true |
-| item              | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :user
-- belongs_to :item
+　2.お気に入り登録を行い、お気に入り一覧をマイページにて確認することができる。
+# データベース設計
+https://gyazo.com/9186e51dac29fe9c19c625eeadc468bd
+# 画面遷移図
+# 開発環境
+HTML・CSS・Ruby
+# ローカルでの動作方法
+# 工夫したポイント
+ターゲット層が20代前半から50代後半を想定しているため、画像やキャッチコピーを爽やかな形とし、難しいイメージを減らすように工夫した。
