@@ -24,6 +24,11 @@
   margin: 4rem;
 }
 
+.item-show {
+  padding: 10px;
+  border-top: 1px solid #acacac;
+}
+
 .content-list {
   display:inline-block;
   padding: 15px 30px;
