@@ -45,13 +45,23 @@
       </p>
     </div>
   </div>
-  <div class='container'>
-    <% if user_signed_in? %>
-      <%= form_with(model: [@item, @comment], class: 'form', local: true) do |form| %>
-        <%= form.text_area :text, class: 'form-message', placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND", class: 'form-submit' %>
+  <div class='comment-form'>
+    <div class='comment-show'>
+      <h4>チャットフォーム</h4>
+      <% @comments.each do |comment| %>
+        <div class='comment-text'>
+          <p><%= comment.user.nickname %> : <%= comment.text %></p>
+        </div>
       <% end %>
-    <% end %>
+    </div>
+    <div class='container'>
+      <% if user_signed_in? %>
+        <%= form_with(model: [@item, @comment], class: 'form', local: true) do |form| %>
+          <%= form.text_area :text, class: 'form-message', placeholder: "コメントする", rows: "2" %>
+          <%= form.submit "SEND", class: 'form-submit' %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 <%= render "shared/footer" %>

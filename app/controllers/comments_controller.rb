@@ -5,7 +5,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to item_path(@item)
     else
-      root_path
+      @comments = @item.comments.includes(:user)
+      redirect_to item_path(@item)
     end
   end
 
