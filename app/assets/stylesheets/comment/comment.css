@@ -1,0 +1,26 @@
+.comment-form {
+  text-align: center;
+}
+
+.comment-title {
+  font-size: 20px;
+  margin: 15px;
+}
+
+.comment-text {
+  margin: 10px;
+}
+
+.container {
+  margin: 20px;
+}
+
+.form-message {
+  width: 75%;
+  margin: 20px;
+  padding: 5px;
+}
+
+.form-submit {
+  padding: 5px 10px;
+}
