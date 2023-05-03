@@ -1,0 +1,50 @@
+.comment-form {
+  text-align: center;
+}
+
+.comment-title {
+  font-size: 20px;
+  margin: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.comment-title::before,
+.comment-title::after {
+  background-color: #ccffff;
+  content: "";
+  height: 5px;
+  width: 28%;
+}
+
+.comment-title::before {
+  margin-right: 15px;
+}
+
+.comment-title::after {
+  margin-left: 15px;
+}
+
+.comment-text {
+  text-align: left;
+  margin: 10px 20%;
+}
+
+.container {
+  margin: 20px;
+}
+
+.form-message {
+  width: 70%;
+  margin: 20px;
+  padding: 5px;
+}
+
+.form-submit {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 8px 30px;
+  border-radius: 15px;
+}
