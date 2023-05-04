@@ -1,30 +1,30 @@
 <%= render "shared/second-header" %>
 
-<div class="main">
+<div class="user-main">
   <div class="user-inner">
-    <div class="form__wrapper">
+    <div class="form_wrapper">
       <h2 class="user-heading">ユーザー新規登録</h2>
 
       <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
 
       <div class="field">
         <%= f.label :email, "メールアドレス" %><br />
-        <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, class:"font-field", id:"user_email", autofocus: true, autocomplete: "email" %>
       </div>
 
       <div class="field">
         <%= f.label :password, "パスワード（6文字以上）" %><br />
-        <%= f.password_field :password, id:"user_password", autocomplete: "new-password" %>
+        <%= f.password_field :password, class:"font-field", id:"user_password", autocomplete: "new-password" %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation, "パスワード再入力" %><br />
-        <%= f.password_field :password_confirmation, id:"user_password_confirmation", autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, class:"font-field", id:"user_password_confirmation", autocomplete: "new-password" %>
       </div>
 
       <div class="field">
         <%= f.label :nickname, "ニックネーム" %> <br />
-        <%= f.text_field :nickname, id:"nickname", autofocus: true, maxlength: "6" %>
+        <%= f.text_field :nickname, id:"nickname", class:"font-nickname", autofocus: true, maxlength: "6" %>
       </div>
 
       <div class="field">
@@ -44,8 +44,8 @@
         </div>
       </div>
 
-      <div class='actons'>
-        <%= f.submit "会員登録" ,class:"register-red-btn" %>
+      <div class='actions'>
+        <%= f.submit "会員登録" ,class:"form-btn" %>
       </div>
 
       <% end %>

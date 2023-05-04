@@ -1,0 +1,60 @@
+.user-main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.form_wrapper {
+  text-align: center;
+}
+
+.user-heading {
+  margin: 35px;
+  font-size: 25px;
+}
+
+.font-field {
+  margin: 10px;
+  border: 1px solid #aeaeae;
+  border-radius: 5px;
+}
+
+.font-nickname {
+  margin: 10px;
+  border: 1px solid #aeaeae;
+  border-radius: 5px;
+  width: 10rem;
+}
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap select {
+  width: 75px;
+  margin-top: 10px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #aeaeae;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap p {
+  line-height: 45px;
+  padding: 0 10px 0 5px;
+}
+
+.actions {
+  margin: 35px;
+}
+
+.form-btn {
+  margin: 25px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  border: 1px solid #aeaeae;
+}
