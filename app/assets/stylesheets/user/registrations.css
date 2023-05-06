@@ -1,17 +1,22 @@
 .user-main {
   display: flex;
   justify-content: center;
+  background-color: #f0f8ff;
   width: 100%;
   min-height: 100vh;
 }
 
 .form_wrapper {
   text-align: center;
+  background-color: #ffffff;
+  padding: 0 5rem;
 }
 
 .user-heading {
-  margin: 35px;
+  margin: 40px;
+  padding-top: 30px;
   font-size: 25px;
+  border-bottom: 2px solid #dc143c;
 }
 
 .font-field {
