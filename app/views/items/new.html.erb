@@ -4,7 +4,8 @@
   <div class="items-main">
     <h2 class="items-title">保険の内容を入力</h2>
     <%= form_with model: @item, local: true do |f| %>
-
+      <%= render 'shared/error_messages', model: f.object %>
+      
       <div class="field">
         <%= f.label :title, "保険名" %><br />
         <%= f.text_field :title, class: :form_title, id:"insurance_title" %>
