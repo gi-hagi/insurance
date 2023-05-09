@@ -84,3 +84,12 @@
   text-decoration: none;
   color: black;
 }
+
+.welcom-nickname {
+  text-align: center;
+  margin: 40px;
+}
+
+.nickaname-view {
+  font-size: 30px;
+}
