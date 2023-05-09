@@ -56,12 +56,12 @@
     </div>
     <div class='container'>
       <% if user_signed_in? %>
-        <%= form_with(model: [@item, @comment], class: 'form', local: true) do |form| %>
+        <%= form_with(model: [@item, @comment], class: 'form', local: true) do |f| %>
         <div class='message-content'>
-          <%= form.text_area :text, class: 'form-message', placeholder: "コメントする", rows: "2" %>
+          <%= f.text_area :text, class: 'form-message', placeholder: "コメントする", rows: "2" %>
         </div>
         <div class='message-send'>
-          <%= form.submit "SEND", class: 'form-submit' %>
+          <%= f.submit "SEND", class: 'form-submit' %>
         </div>
         <% end %>
       <% else %>

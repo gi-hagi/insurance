@@ -69,7 +69,7 @@
     </ul>
   </div>
 </div>
-<% if user_signed_in? %>
+<% if current_user == User.find_by(nickname: 'owner') %>
   <%= link_to "新規投稿", new_item_path, class: "purchase-btn" %>
 <% end %>
 <%= render "shared/footer" %>

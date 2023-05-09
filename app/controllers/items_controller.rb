@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :item_action, except: [:index, :new, :create]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_user_access, only: [:new, :creste, :edit, :update, :destroy]
   before_action :log_edit, only: [:edit, :update, :destroy]
 
   def index
@@ -50,6 +51,12 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:title, :concept, :feature, :merit, :demerit).merge(user_id: current_user.id)
+  end
+
+  def check_user_access
+    unless current_user == User.find_by(nickname: 'owner')
+      redirect_to root_path, alert: "アクセス権限がありません。"
+    end
   end
 
   def log_edit
