@@ -48,6 +48,14 @@
     </div>
   </div>
 
+  <div class='welcom-nickname'>
+    <% if user_signed_in? %>
+    <p class='nickaname-view'>ようこそ <%= current_user.nickname %> さん</p>
+    <% else %>
+      <p class='nickaname-view'>ようこそ ゲストさん</p>
+    <% end %>
+  </div>
+
   <%# 保険一覧 %>
   <div class='item-contents'>
     <h3 class='select-insurance'>
