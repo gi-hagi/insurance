@@ -51,8 +51,6 @@
   <div class='welcom-nickname'>
     <% if user_signed_in? %>
     <p class='nickaname-view'>ようこそ <%= current_user.nickname %> さん</p>
-    <% else %>
-      <p class='nickaname-view'>ようこそ ゲストさん</p>
     <% end %>
   </div>
 
@@ -70,7 +68,7 @@
             </div>
           </div>
           <div class='item-feature'>
-            <%= link_to item.feature, item_path(item.id), class: :item_none %>
+            <%= link_to item.concept, item_path(item.id), class: :item_none %>
           </div>
         </li>
       <% end %>
