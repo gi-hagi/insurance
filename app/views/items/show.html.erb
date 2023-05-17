@@ -11,6 +11,7 @@
           <%= link_to "削除", item_path, method: :delete, class:"purchase-btn-red" %>
         </div>
       <% end %>
+      <%= link_to "お気に入り登録", item_likes_path(@item), method: :post, remote: true, class: "likes-btn" %>
    <% end %>
   </div>
   <div class="item-page">
