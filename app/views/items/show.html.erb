@@ -11,12 +11,8 @@
           <%= link_to "削除", item_path, method: :delete, class:"purchase-btn-red" %>
         </div>
       <% end %>
-        <div id="like-btn<%= @item.id %>">
-        <% if @item.liked_by?(current_user)%>
-          <%=link_to "お気に入り解除", item_likes_path(@item.id),  method: :delete, class: "item_likes" %>
-        <% else %>
-          <%=link_to "お気に入り登録", item_likes_path(@item.id), method: :post, class: "item_likes" %>
-        <% end %>
+      <div id="like-btn<%= @item.id %>">
+        <%= render partial: "likes/like", locals: { item: @item } %>
       </div>
     <% end %>
   </div>
