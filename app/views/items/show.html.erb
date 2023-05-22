@@ -11,7 +11,10 @@
           <%= link_to "削除", item_path, method: :delete, class:"purchase-btn-red" %>
         </div>
       <% end %>
-   <% end %>
+      <div id="like-btn<%= @item.id %>">
+        <%= render partial: "likes/like", locals: { item: @item } %>
+      </div>
+    <% end %>
   </div>
   <div class="item-page">
     <div class="item-show">
