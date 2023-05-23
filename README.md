@@ -74,9 +74,15 @@ Life Plannerのトップページです。<br>
 
 [![Image from Gyazo](https://i.gyazo.com/849c7e6c7f3693a93ea12ef7a25f8114.png)](https://gyazo.com/849c7e6c7f3693a93ea12ef7a25f8114)
 
+- お気に入り登録機能
+
+[![Image from Gyazo](https://i.gyazo.com/98cbe5f82f5c9f05c2134c413059c9a1.gif)](https://gyazo.com/98cbe5f82f5c9f05c2134c413059c9a1)
+
+お気に入り登録ボタンを押すと非同期通信にてコードを作成したため、お気に入り登録ボタンのみの更新を可能にしています。
+
 # 実装予定の機能
 
-- お気に入り登録を行い、お気に入り一覧をマイページにて確認することができるようにします。
+- お気に入り一覧をマイページにて確認することができるようにします。
 
 # データベース設計
 
