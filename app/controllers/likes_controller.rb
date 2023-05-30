@@ -3,6 +3,7 @@ class LikesController < ApplicationController
   before_action :set_item
 
   def index
+    @item = Item.find(params[:item_id])
     @likes = current_user.likes
   end
 

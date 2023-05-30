@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @item = @items.first
   end
 
   def new
