@@ -14,6 +14,11 @@
         </div>
       </li>
     <% end %>
+    <% if @likes.empty? %>
+      <h3 class='likes-message'>
+        お気に入りの登録がされていません
+      </h3>
+    <% end %>
   </ul>
 </div>
 <%= render "shared/footer" %>

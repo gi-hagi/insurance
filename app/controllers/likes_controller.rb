@@ -7,7 +7,7 @@ class LikesController < ApplicationController
   end
 
   def create
-    like = current_user.likes.build(item_id: params[:item_id])
+    like = current_user.likes.build(item_id: params[:item_id], user_id: current_user.id)
     like.save
     render 'create.js.erb'
   end
