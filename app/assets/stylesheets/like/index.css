@@ -1,3 +1,8 @@
+.item-contents {
+  width: 100%;
+  min-height: 100vh;
+}
+
 .user-mypage {
   text-align: center;
   padding: 20px;
