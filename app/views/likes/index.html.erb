@@ -1,0 +1,24 @@
+<%= render "shared/second-header" %>
+<div class='item-contents'>
+  <p class='user-mypage'><%= current_user.nickname %> さんのお気に入り一覧</p>
+  <ul class='item-lists'>
+    <% @likes.each do |like| %>
+      <li class='item-list'>
+        <div class='item-info'>
+          <div class='item-sub'>
+            <%= link_to like.item.title, item_path(like.item.id), class: :item_none %>
+          </div>
+        </div>
+        <div class='item-feature'>
+          <%= link_to like.item.concept, item_path(like.item.id), class: :item_none %>
+        </div>
+      </li>
+    <% end %>
+    <% if @likes.empty? %>
+      <h3 class='likes-message'>
+        お気に入りの登録がされていません
+      </h3>
+    <% end %>
+  </ul>
+</div>
+<%= render "shared/footer" %>

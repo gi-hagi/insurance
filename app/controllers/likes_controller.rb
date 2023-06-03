@@ -2,8 +2,12 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_item
 
+  def index
+    @likes = current_user.likes
+  end
+
   def create
-    like = current_user.likes.build(item_id: params[:item_id])
+    like = current_user.likes.build(item_id: params[:item_id], user_id: current_user.id)
     like.save
     render 'create.js.erb'
   end
